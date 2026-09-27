@@ -77,8 +77,9 @@ def reject_reason(video, blocklist):
         return "not-public"
     if snippet.get("liveBroadcastContent", "none") != "none" or "liveStreamingDetails" in video:
         return "live"
-    if details.get("regionRestriction"):
-        return "region-restricted"
+    region = details.get("regionRestriction") or {}
+    if "allowed" in region and not region["allowed"]:
+        return "region-restricted"  # allowed nowhere
     if details.get("contentRating", {}).get("ytRating") == "ytAgeRestricted":
         return "age-restricted"
     duration = parse_duration(details.get("duration"))
@@ -93,7 +94,7 @@ def to_feed_video(video):
     snippet = video["snippet"]
     player = video.get("player", {})
     w, h = int(player.get("embedWidth") or 16), int(player.get("embedHeight") or 9)
-    return {
+    item = {
         "id": video["id"],
         "channelId": snippet["channelId"],
         "title": snippet.get("title", ""),
@@ -101,6 +102,13 @@ def to_feed_video(video):
         "vertical": h > w,
         "publishedAt": snippet.get("publishedAt", ""),
     }
+    # Country rules stay in the feed; the app checks them against the TV's country.
+    region = video["contentDetails"].get("regionRestriction") or {}
+    if "allowed" in region:
+        item["allowed"] = sorted(region["allowed"])
+    elif region.get("blocked"):
+        item["blocked"] = sorted(region["blocked"])
+    return item
 
 
 # ---------- YouTube API ----------

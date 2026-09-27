@@ -66,7 +66,7 @@ class RejectReason(unittest.TestCase):
             "not-embeddable": video(status__embeddable=False),
             "not-public": video(status__privacyStatus="unlisted"),
             "live": video(snippet__liveBroadcastContent="upcoming"),
-            "region-restricted": video(contentDetails__regionRestriction={"blocked": ["TR"]}),
+            "region-restricted": video(contentDetails__regionRestriction={"allowed": []}),
             "age-restricted": video(contentDetails__contentRating={"ytRating": "ytAgeRestricted"}),
             "duration": video(contentDetails__duration="PT12M"),
             "blocklist": video(snippet__title="Scary ghost story"),
@@ -122,6 +122,15 @@ class Build(unittest.TestCase):
         self.assertFalse(ids["wide0000001"]["vertical"])
         self.assertEqual(ids["good0000001"]["durationSec"], 58)
         self.assertEqual(feed["schemaVersion"], 1)
+        self.assertNotIn("allowed", ids["good0000001"])
+
+    def test_region_rules_are_kept_for_the_app(self):
+        allowed = video(contentDetails__regionRestriction={"allowed": ["US", "GB"]})
+        blocked = video(contentDetails__regionRestriction={"blocked": ["TR"]})
+        self.assertIsNone(bf.reject_reason(allowed, BLOCKLIST))
+        self.assertIsNone(bf.reject_reason(blocked, BLOCKLIST))
+        self.assertEqual(bf.to_feed_video(allowed)["allowed"], ["GB", "US"])
+        self.assertEqual(bf.to_feed_video(blocked)["blocked"], ["TR"])
 
 
 if __name__ == "__main__":
