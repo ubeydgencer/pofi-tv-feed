@@ -1,0 +1,10 @@
+{
+  "_comment": "Title keywords that drop a video even from an approved channel. Case-insensitive, Turkish diacritics ignored (ş=s, ı=i, ...). Whole-word match; a trailing * means 'word starts with'.",
+  "keywords": [
+    "korku*", "korkut*", "hayalet*", "zombi*", "vampir*", "seytan*", "kan", "kanli", "silah*", "savas*", "kavga*", "dovus*",
+    "horror", "scary", "creepy", "spooky", "ghost*", "zombie*", "vampire*", "demon*", "blood*", "gun", "guns", "war", "fight*",
+    "prank*", "halloween", "cadilar bayrami", "trailer", "fragman", "reaction", "tepki",
+    "skibidi*", "huggy*", "wuggy", "poppy playtime", "rainbow friends", "siren head", "momo", "five nights", "fnaf",
+    "banban", "catnap", "smiling critters"
+  ]
+}

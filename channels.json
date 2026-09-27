@@ -1,0 +1,28 @@
+{
+  "_comment": "Pofi TV curated channel catalog. Only official, child-directed channels. Each entry was matched by handle + verification badge + subscriber count on 2026-09-27.",
+  "channels": [
+    { "id": "UCrFf5dtMe6M1XJHqbKJ4X6Q", "handle": "@trtcocuk",              "name": "TRT Çocuk",           "lang": "tr", "enabledByDefault": true },
+    { "id": "UCulhl59jt6JWPb2Se7HsmUg", "handle": "@pepeedunyasi",          "name": "Pepee",               "lang": "tr", "enabledByDefault": true },
+    { "id": "UCF5IUvgXe_3sHBuKpEz7Btw", "handle": "@Kukuli",                "name": "Kukuli",              "lang": "tr", "enabledByDefault": true },
+    { "id": "UCKFIi1uWM9BCMb7O_GyvBsQ", "handle": "@niloyatv",              "name": "Niloya",              "lang": "tr", "enabledByDefault": true },
+    { "id": "UCAWgb0vBqOJAgRDl6QivWZQ", "handle": "@Dusyericizgifilm",      "name": "Leliko",              "lang": "tr", "enabledByDefault": true },
+    { "id": "UC4fmBMzf7iWyFx7ysCCLqDA", "handle": "@Dusyeri",               "name": "Düşyeri",             "lang": "tr", "enabledByDefault": true },
+    { "id": "UCzWK1XiPAa6uiLWu_D4xzBg", "handle": "@PeppaPigTürkçeResmiKanal", "name": "Peppa Pig Türkçe",  "lang": "tr", "enabledByDefault": true },
+    { "id": "UCWbaNJJJQWBOX9U9H9K52Ag", "handle": "@MashaBearTURKEY",       "name": "Maşa ile Koca Ayı",   "lang": "tr", "enabledByDefault": true },
+    { "id": "UCTSqeyl0_d8ZbpchNkEGN2Q", "handle": "@pocoyoturk",            "name": "Pocoyo Türkçe",       "lang": "tr", "enabledByDefault": true },
+    { "id": "UCLw0GF2UMzkrMewFUFFUVow", "handle": "@ElifveArkadaslar",      "name": "Elif ve Arkadaşları", "lang": "tr", "enabledByDefault": true },
+    { "id": "UCNejE03PzpBBfX9NNEVRLCQ", "handle": "@rafadantayfaofficial",  "name": "Rafadan Tayfa",       "lang": "tr", "enabledByDefault": true },
+    { "id": "UC6tO9mH5Ts5sqc9DOxuRLkw", "handle": "@kostebekgillertv",      "name": "Köstebekgiller",      "lang": "tr", "enabledByDefault": true },
+
+    { "id": "UCVzLLZkDuFGAE2BGdBuBNBg", "handle": "@BlueyOfficialChannel",  "name": "Bluey",               "lang": "en", "enabledByDefault": true },
+    { "id": "UCAOtE1V7Ots4DjM8JLlrYgg", "handle": "@PeppaPigOfficial",      "name": "Peppa Pig",           "lang": "en", "enabledByDefault": true },
+    { "id": "UCLsooMJoIpl_7ux2jvdPB-Q", "handle": "@SuperSimpleSongs",      "name": "Super Simple Songs",  "lang": "en", "enabledByDefault": true },
+    { "id": "UCG2CL6EUjG8TVT1Tpl9nJdg", "handle": "@msrachel",              "name": "Ms Rachel",           "lang": "en", "enabledByDefault": true },
+    { "id": "UCPlwvN0w4qFSP1FllALB92w", "handle": "@Numberblocks",          "name": "Numberblocks",        "lang": "en", "enabledByDefault": true },
+    { "id": "UCj_mFUb-47d9QNiJ5556LjQ", "handle": "@HeyDuggeeOfficial",     "name": "Hey Duggee",          "lang": "en", "enabledByDefault": true },
+    { "id": "UCoookXUzPciGrEZEXmh4Jjg", "handle": "@SesameStreet",          "name": "Sesame Street",       "lang": "en", "enabledByDefault": true },
+    { "id": "UCdknlZNiH-2VWrvjXkx9dJA", "handle": "@pocoyoenglish",         "name": "Pocoyo",              "lang": "en", "enabledByDefault": true },
+    { "id": "UCcdwLMPsaU2ezNSJU1nFoBQ", "handle": "@Pinkfong",              "name": "Pinkfong",            "lang": "en", "enabledByDefault": true },
+    { "id": "UCbCmjCuTUZos6Inko4u57UQ", "handle": "@CoComelon",             "name": "Cocomelon",           "lang": "en", "enabledByDefault": false }
+  ]
+}
